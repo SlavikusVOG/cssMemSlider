@@ -1,0 +1,47 @@
+html, body {
+	/* overflow: hidden; */
+}
+
+.wrapper {
+	margin: 25vh auto;
+	width: 60vw;
+	height: 50vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
+
+.wrapper input {
+	display: none;
+}
+
+.wrapper .slider{
+	display: flex;
+	flex-direction: column;
+}
+
+.wrapper .slider .slider__mem {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.wrapper .slider .slide {
+	width: 60vw;
+	display: flex;
+	justify-content: center;
+}
+
+.responsive {
+	/* width: 100%; */
+	/* height: auto; */
+	width: auto;
+	height: 30vh;
+	margin: auto;
+}
+
+.control-panel {
+	
+}

@@ -4,21 +4,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>CSS MEM SLIDER</title>
 </head>
 <body>
     <div class="wrapper">
-        <h1>Мемасики подъехали</h1>
-        <div class="slider">
-            <img src="somehref" alt="slide1">
-            <img src="somehref" alt="slide2">
-            <img src="somehref" alt="slide3">
-            <img src="somehref" alt="slide4">
-        </div>
         <input type="radio" id="btn1" name="memRadio" checked>
         <input type="radio" id="btn2" name="memRadio">
         <input type="radio" id="btn3" name="memRadio">
         <input type="radio" id="btn4" name="memRadio">
+        <input type="radio" id="btn5" name="memRadio">
+        <input type="radio" id="btn6" name="memRadio">
+        <h1>Мемасики подъехали</h1>
+        <div class="slider">
+            <div class="slider__mem">
+                <div class="slide">
+                    <img src="./assets/front-back-man.jpg" alt="slide1" class="responsive">
+                </div>
+                <div class="slide">
+                    <img src="./assets/full-stack.jpg" alt="slide2" class="responsive">
+                </div>
+                <div class="slide">
+                    <img src="./assets/javascript.jpg" alt="slide3" class="responsive">
+                </div>
+                <div class="slide">
+                    <img src="./assets/onboarding.jpg" alt="slide4" class="responsive">
+                </div>
+                <div class="slide">
+                    <img src="./assets/programmers.jpg" alt="slide5" class="responsive">
+                </div>
+                <div class="slide">
+                    <img src="./assets/tester.jpg" alt="slide6" class="responsive">
+                </div>
+            </div>
+        </div>
+        <div class="control-panel">
+            <div class="description"></div>
+            <div class="control">
+                <label for="btn1"></label>
+                <label for="btn2"></label>
+                <label for="btn3"></label>
+                <label for="btn4"></label>
+                <label for="btn5"></label>
+                <label for="btn6"></label>
+            </div>
+        </div>
     </div>
 </body>
 </html>
