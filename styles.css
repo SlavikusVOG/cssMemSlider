@@ -4,38 +4,39 @@ html, body {
 
 .wrapper {
 	margin: 15vh auto 35vh;
-	width: 60vw;
-	height: 50vh;
+	width: 95vw;
+	height: 50%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	overflow: hidden;
+	border: 3px solid red;
 }
 
 .wrapper .slider{
 	display: flex;
 	flex-direction: column;
-	width: 60vw;
+	width: 95vw;
+	border-top: 3px solid red;
 }
 
 .wrapper .slider .slider__mem {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	width: 60vw;
+	width: 95vw;
+	transition: 1s;
 }
 
 .wrapper .slider .slide {
-	min-width: 60vw;
+	min-width: 95vw;
 	display: flex;
 	justify-content: center;
 }
 
 .responsive {
-	/* width: 100%; */
-	/* height: auto; */
-	width: auto;
+	max-width: 100%;
 	height: 40vh;
 	margin: auto;
 }
@@ -46,9 +47,11 @@ html, body {
 	justify-content: space-between;
 	align-items: center;
 	height: 60px;
+	border-top: 3px solid red;
 }
 
 .control-panel .visual-text {
+	padding-left: 10px;
 	overflow: hidden;
 }
 
@@ -57,11 +60,12 @@ html, body {
 	flex-direction: row;
 	flex-wrap: nowrap;
 	width: 200px;
+	transition: 1s;
 }
 
 .control-panel .descriptions .description {
 	min-width: 200px;
-	white-space: nowrap;
+	text-align: center;
 }
 
 input {
@@ -93,19 +97,19 @@ input {
 	transform: translate(0);
 }
 #radio2:checked ~ .slider__mem {
-	transform: translate(-60vw);
+	transform: translate(-95vw);
 }
 #radio3:checked ~ .slider__mem {
-	transform: translate(-120vw);
+	transform: translate(-190vw);
 }
 #radio4:checked ~ .slider__mem {
-	transform: translate(-180vw);
+	transform: translate(-285vw);
 }
 #radio5:checked ~ .slider__mem {
-	transform: translate(-240vw);
+	transform: translate(-380vw);
 }
 #radio6:checked ~ .slider__mem {
-	transform: translate(-300vw);
+	transform: translate(-475vw);
 }
 
 #radio1:checked ~ .control-panel .visual-text .descriptions {
@@ -125,4 +129,14 @@ input {
 }
 #radio6:checked ~ .control-panel .visual-text .descriptions {
 	transform: translate(-1000px);
+}
+
+@media (max-width: 720px) {
+	.slider .control-panel {
+		display: flex;
+		flex-direction: column-reverse;
+		justify-content: space-between;
+		align-items: center;
+		height: 90px;
+	}
 }
