@@ -1,0 +1,142 @@
+html, body {
+	/* overflow: hidden; */
+}
+
+.wrapper {
+	margin: 15vh auto 35vh;
+	width: 95vw;
+	height: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	border: 3px solid red;
+}
+
+.wrapper .slider{
+	display: flex;
+	flex-direction: column;
+	width: 95vw;
+	border-top: 3px solid red;
+}
+
+.wrapper .slider .slider__mem {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	width: 95vw;
+	transition: 1s;
+}
+
+.wrapper .slider .slide {
+	min-width: 95vw;
+	display: flex;
+	justify-content: center;
+}
+
+.responsive {
+	max-width: 100%;
+	height: 40vh;
+	margin: auto;
+}
+
+.slider .control-panel {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	height: 60px;
+	border-top: 3px solid red;
+}
+
+.control-panel .visual-text {
+	padding-left: 10px;
+	overflow: hidden;
+}
+
+.control-panel .descriptions {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	width: 200px;
+	transition: 1s;
+}
+
+.control-panel .descriptions .description {
+	min-width: 200px;
+	text-align: center;
+}
+
+input {
+	display: none;
+}
+
+.control-panel .control label {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin: 0 3px;
+	background: #ccc;
+	cursor: pointer;
+	border: 4px solid white;
+	border-radius: 50%;
+	transition: background-color .2s;
+}
+
+#radio1:checked ~ .control-panel .control label[for="radio1"],
+#radio2:checked ~ .control-panel .control label[for="radio2"],
+#radio3:checked ~ .control-panel .control label[for="radio3"],
+#radio4:checked ~ .control-panel .control label[for="radio4"],
+#radio5:checked ~ .control-panel .control label[for="radio5"],
+#radio6:checked ~ .control-panel .control label[for="radio6"]{
+    background: black;
+}
+
+#radio1:checked ~ .slider__mem {
+	transform: translate(0);
+}
+#radio2:checked ~ .slider__mem {
+	transform: translate(-95vw);
+}
+#radio3:checked ~ .slider__mem {
+	transform: translate(-190vw);
+}
+#radio4:checked ~ .slider__mem {
+	transform: translate(-285vw);
+}
+#radio5:checked ~ .slider__mem {
+	transform: translate(-380vw);
+}
+#radio6:checked ~ .slider__mem {
+	transform: translate(-475vw);
+}
+
+#radio1:checked ~ .control-panel .visual-text .descriptions {
+	transform: translate(0);
+}
+#radio2:checked ~ .control-panel .visual-text .descriptions {
+	transform: translate(-200px);
+}
+#radio3:checked ~ .control-panel .visual-text .descriptions {
+	transform: translate(-400px);
+}
+#radio4:checked ~ .control-panel .visual-text .descriptions {
+	transform: translate(-600px);
+}
+#radio5:checked ~ .control-panel .visual-text .descriptions {
+	transform: translate(-800px);
+}
+#radio6:checked ~ .control-panel .visual-text .descriptions {
+	transform: translate(-1000px);
+}
+
+@media (max-width: 720px) {
+	.slider .control-panel {
+		display: flex;
+		flex-direction: column-reverse;
+		justify-content: space-between;
+		align-items: center;
+		height: 90px;
+	}
+}
